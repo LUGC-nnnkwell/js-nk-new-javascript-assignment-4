@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function fetchWeather() {
     const city = document.getElementById('city-select').value;
     const { lat, lon } = cities[city];
-    fetch(`http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civillight&output=json`)
+    fetch(`https://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=civillight&output=json`)
     .then(response => response.json())
     .then(data => {
         displayWeather(data);
